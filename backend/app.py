@@ -76,7 +76,7 @@ original_values = dataset['squid_abundance_per_kgs'].values
 target_scaler = MinMaxScaler()
 dataset['squid_abundance_per_kgs_scaled'] = target_scaler.fit_transform(original_values.reshape(-1, 1))
 
-sequence_length = 10
+sequence_length = 12
 X, y, hotspot_ids, dates = [], [], [], []
 for hotspot_id in dataset['hotspot_id'].unique():
     hotspot_data = dataset[dataset['hotspot_id'] == hotspot_id]
